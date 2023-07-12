@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 // Components
 import ReactCustomScrollbar from "../MarketingAgency/ReactCustomScrollbar";
 import Buttons from './Button/Buttons'
-import PortfolioSwitchImg from "../Portfolio/PortfolioSwitchImg";
+import PortfolioSwitchImg from "../Global/Portfolio/PortfolioSwitchImg";
 import { fadeIn } from "../../Functions/GlobalAnimations";
 import useOnClickOutside from "../../Functions/UseOnClickOutside";
 

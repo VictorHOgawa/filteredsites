@@ -6,10 +6,10 @@ import { PropTypes } from "prop-types";
 import { m } from "framer-motion";
 
 // Components
-import Filter from './Filter';
+import Filter from  '../../Global/Portfolio/Filter';
 
 // Data
-import { portfolioSwitchImgData } from '../DigitalAgency/Portfolio/PortfolioData'
+import { portfolioSwitchImgData } from './PortfolioData'
 
 const PortfolioSwitchImg = (props) => {
     const portfolioWrapper = useRef()
@@ -19,7 +19,7 @@ const PortfolioSwitchImg = (props) => {
         let allImages = portfolioWrapper.current.querySelectorAll("img");
 
         Promise.all(Array.prototype.slice.call(allImages).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
-            import("../../Functions/Utilities").then(module => {
+            import("../../../Functions/Utilities").then(module => {
                 const grid = module.initializeIsotop(portfolioWrapper.current)
                 grid.on('arrangeComplete', () => setLoading(false));
             })
